@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<title>حقائق عن الطيور المهاجرة إلى جنوب أفريقيا</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f0f8ff; padding: 20px; direction: rtl; }
+  #content { display: none; max-width: 600px; margin: auto; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+  #login { max-width: 300px; margin: 100px auto; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 0 10px #ccc; }
+  input[type="password"] { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; box-sizing: border-box; }
+  button { width: 100%; padding: 10px; background: #004080; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+  button:hover { background: #003366; }
+  h1 { color: #004080; text-align: center; }
+</style>
+</head>
+<body>
+
+<div id="login">
+  <h2>أدخل كلمة السر للدخول</h2>
+  <input type="password" id="passwordInput" placeholder="كلمة السر" />
+  <button onclick="checkPassword()">دخول</button>
+  <p id="errorMsg" style="color:red; display:none;">كلمة السر غير صحيحة، حاول مرة أخرى.</p>
+</div>
+
+<div id="content">
+  <h1>حقائق عن الطيور المهاجرة إلى جنوب أفريقيا</h1>
+  <p>مرحباً بك في موقع حقائق الطيور المهاجرة! هذا الموقع يحتوي على معلومات رائعة عن الطيور التي تهاجر إلى جنوب أفريقيا.</p>
+  <ul>
+    <li>الطيور المهاجرة تختار جنوب أفريقيا كوجهة دافئة خلال فصل الشتاء.</li>
+    <li>تتنوع الطيور بين أنواع صغيرة وكبيرة مثل الفلامينغو والنسر.</li>
+    <li>تساعد الرحلات المهاجرة في الحفاظ على التوازن البيئي.</li>
+  </ul>
+</div>
+
+<script>
+  const correctPassword = "Bird4321";
+
+  function checkPassword() {
+    const input = document.getElementById('passwordInput').value;
+    const errorMsg = document.getElementById('errorMsg');
+    if(input === correctPassword) {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    } else {
+      errorMsg.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
